@@ -43,7 +43,7 @@
     <script>
         //alert(document.title);
         // websocket & stomp initialize
-        var sock = new SockJS("/ws-stomp");
+        var sock = new SockJS("/ws-stomp?name=" + localStorage.getItem('wschat.sender'));
         var ws = Stomp.over(sock);
         var reconnect = 0;
         // vue.js

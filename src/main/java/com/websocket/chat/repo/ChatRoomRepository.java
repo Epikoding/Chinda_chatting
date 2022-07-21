@@ -3,6 +3,7 @@ package com.websocket.chat.repo;
 import com.websocket.chat.model.ChatRoom;
 import com.websocket.chat.pubsub.RedisSubscriber;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.listener.ChannelTopic;
@@ -13,7 +14,9 @@ import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
+@Slf4j
 @RequiredArgsConstructor
 @Repository
 public class ChatRoomRepository {
@@ -43,8 +46,16 @@ public class ChatRoomRepository {
      * 채팅방 생성 : 서버간 채팅방 공유를 위해 redis hash에 저장한다.
      */
     public ChatRoom createChatRoom(String name) {
-        ChatRoom chatRoom = ChatRoom.create(name);
+        ChatRoom chatRoom = ChatRoom.builder()
+                .roomId(UUID.randomUUID().toString())
+                .name(name)
+                .build();
+
         opsHashChatRoom.put(CHAT_ROOMS, chatRoom.getRoomId(), chatRoom);
+
+        log.info("chatRoomId = " + chatRoom.getRoomId());
+        log.info("chatRoom = " + chatRoom);
+
         return chatRoom;
     }
 

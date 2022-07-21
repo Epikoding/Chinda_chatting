@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class RedisPublisher {
 
+//    private final ChatMessage chatMessage;
     private final RedisTemplate<String, Object> redisTemplate;
 
     public void publish(ChannelTopic topic, ChatMessage message) {
