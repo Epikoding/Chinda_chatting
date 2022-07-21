@@ -67,7 +67,8 @@
                                 this.findAllRoom();
                             }
                         )
-                        .catch( response => { alert("채팅방 개설에 실패하였습니다."); } );
+                        .catch( response => { alert("채팅방 개설에 " +
+                            "실패하였습니다."); } );
                     }
                 },
                 enterRoom: function(roomId) {

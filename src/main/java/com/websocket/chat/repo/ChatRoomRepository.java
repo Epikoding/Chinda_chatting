@@ -17,8 +17,8 @@ import java.util.Map;
 import java.util.UUID;
 
 @Slf4j
-@RequiredArgsConstructor
 @Repository
+@RequiredArgsConstructor
 public class ChatRoomRepository {
 
     private final RedisMessageListenerContainer redisMessageListener; // 채팅방(topic)에 발행되는 메시지를 처리할 Listner
@@ -42,35 +42,5 @@ public class ChatRoomRepository {
         return opsHashChatRoom.get(CHAT_ROOMS, id);
     }
 
-    /**
-     * 채팅방 생성 : 서버간 채팅방 공유를 위해 redis hash에 저장한다.
-     */
-    public ChatRoom createChatRoom(String name) {
-        ChatRoom chatRoom = ChatRoom.builder()
-                .roomId(UUID.randomUUID().toString())
-                .name(name)
-                .build();
 
-        opsHashChatRoom.put(CHAT_ROOMS, chatRoom.getRoomId(), chatRoom);
-
-        log.info("chatRoomId = " + chatRoom.getRoomId());
-        log.info("chatRoom = " + chatRoom);
-
-        return chatRoom;
-    }
-
-    /**
-     * 채팅방 입장 : redis에 topic을 만들고 pub/sub 통신을 하기 위해 리스너를 설정한다.
-     */
-    public void enterChatRoom(String roomId) {
-        ChannelTopic topic = topics.get(roomId);
-        if (topic == null)
-            topic = new ChannelTopic(roomId);
-        redisMessageListener.addMessageListener(redisSubscriber, topic);
-        topics.put(roomId, topic);
-    }
-
-    public ChannelTopic getTopic(String roomId) {
-        return topics.get(roomId);
-    }
 }
