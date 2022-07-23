@@ -30,20 +30,6 @@ public class ChatRoomController {
         return "/chat/room";
     }
 
-    @Operation(summary = "모든 방 찾기 API")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = HttpCode.HTTPSTATUS_OK, description = "방 생성",
-                    content = {@Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = ChatRoom.class)))}),
-            @ApiResponse(responseCode = HttpCode.HTTPSTATUS_FORBIDDEN, description = "로그인 필요", content = @Content),
-            @ApiResponse(responseCode = HttpCode.HTTPSTATUS_BADREQUEST, description = "요청 데이터 오류", content = @Content),
-            @ApiResponse(responseCode = HttpCode.HTTPSTATUS_SERVERERROR, description = "서버 오류", content = @Content)
-    })
-    @GetMapping("/rooms")
-    @ResponseBody
-    public List<ChatRoom> room() {
-        return chatRoomRepository.findAllRoom();
-    }
-
     @Operation(summary = "방 생성 API")
     @ApiResponses(value = {
             @ApiResponse(responseCode = HttpCode.HTTPSTATUS_OK, description = "방 생성",
@@ -54,7 +40,8 @@ public class ChatRoomController {
     })
     @PostMapping("/room")
     @ResponseBody
-    public ChatRoom createRoom(@RequestParam String name) {
+    public ChatRoom createRoom(String name) {
+//        return chatRoomService.createChatRoom(name);
         return chatRoomService.createChatRoom(name);
     }
 
@@ -76,5 +63,19 @@ public class ChatRoomController {
     @ResponseBody
     public ChatRoom roomInfo(@PathVariable String roomId) {
         return chatRoomRepository.findRoomById(roomId);
+    }
+
+    @Operation(summary = "모든 방 찾기 API")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = HttpCode.HTTPSTATUS_OK, description = "방 생성",
+                    content = {@Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = ChatRoom.class)))}),
+            @ApiResponse(responseCode = HttpCode.HTTPSTATUS_FORBIDDEN, description = "로그인 필요", content = @Content),
+            @ApiResponse(responseCode = HttpCode.HTTPSTATUS_BADREQUEST, description = "요청 데이터 오류", content = @Content),
+            @ApiResponse(responseCode = HttpCode.HTTPSTATUS_SERVERERROR, description = "서버 오류", content = @Content)
+    })
+    @GetMapping("/rooms")
+    @ResponseBody
+    public List<ChatRoom> room() {
+        return chatRoomRepository.findAllRoom();
     }
 }

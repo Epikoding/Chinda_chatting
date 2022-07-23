@@ -17,8 +17,12 @@ public class UserHandshakeHandler extends DefaultHandshakeHandler {
 
     @Override
     protected Principal determineUser(ServerHttpRequest request, WebSocketHandler wsHandler, Map<String, Object> attributes) {
-        String userName = request.getURI().toString().split("=")[1];
-        LOG.info("userName", userName);
+        log.info("UserHandshakeHandler, URL: " + String.valueOf(request.getURI()));
+
+        String url = request.getURI().toString();
+        String userName = url.split("=")[1];
+
+        LOG.info("UserHandshakeHandler, userName : {}", userName);
 
         return new UserPrincipal(userName);
     }

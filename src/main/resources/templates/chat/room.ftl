@@ -73,6 +73,9 @@
                 },
                 enterRoom: function(roomId) {
                     var sender = prompt('대화명을 입력해 주세요.');
+
+                    console.log(sender)
+
                     if(sender != "") {
                         sender = Math.random().toString(36).substr(2, 11);
                         localStorage.setItem('wschat.sender',sender);
