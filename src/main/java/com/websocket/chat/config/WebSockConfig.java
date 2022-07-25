@@ -4,16 +4,19 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.ChannelRegistration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
-import org.springframework.web.socket.config.annotation.EnableWebSocket;
-import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
-import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
-import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
+import org.springframework.web.socket.config.annotation.*;
 
 @Configuration
 @EnableWebSocketMessageBroker
 @RequiredArgsConstructor
 public class WebSockConfig implements WebSocketMessageBrokerConfigurer {
     private final StompHandler stompHandler;
+
+    @Override
+    public void configureWebSocketTransport(WebSocketTransportRegistration registry) {
+        registry.setTimeToFirstMessage(30 * 60 * 10000) // 10000 = 1초
+                .setSendTimeLimit(30 * 60 * 10000); // 30분 설정
+    }
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
@@ -27,7 +30,6 @@ public class WebSockConfig implements WebSocketMessageBrokerConfigurer {
                 .setHandshakeHandler(new UserHandshakeHandler())
                 .setAllowedOrigins("http://localhost:3000")
                 .withSockJS();
-
     }
 
     @Override

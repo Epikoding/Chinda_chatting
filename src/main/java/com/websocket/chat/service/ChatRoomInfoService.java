@@ -15,7 +15,6 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class ChatRoomInfoService {
-    private static final String ROOM_NUM_STATE = "ROOM_NUM_STATE"; // Redis
     private static final String USER_COUNT = "USER_COUNT"; // Redis
     private static final String ENTER_INFO = "ENTER_INFO"; // Redis
     private final RedisTemplate<String, Object> redisTemplate;
@@ -28,7 +27,11 @@ public class ChatRoomInfoService {
         opsFinder = redisTemplate.opsForValue();
     }
 
-    // 유저가 입장한 채팅방ID와 유저 세션ID 맵핑 정보 저장
+    /**
+     * 유저가 입장한 채팅방ID와 유저 세션ID 맵핑 정보 저장
+     * @param sessionId
+     * @param roomId
+     */
     public void setUserEnterInfo(String sessionId, String roomId) {
         log.info(sessionId);
         log.info(roomId);
@@ -38,24 +41,39 @@ public class ChatRoomInfoService {
         log.info(String.valueOf(opsHashEnterInfo));
     }
 
-    // 유저 세션으로 입장해 있는 채팅방 ID 조회
+    /**
+     * 유저 세션으로 입장해 있는 채팅방 ID 조회
+     * @param sessionId
+     * @return
+     */
     public String getUserEnterRoomId(String sessionId) {
         return opsHashEnterInfo.get(ENTER_INFO, sessionId);
     }
 
-    // 유저 세션정보와 맵핑된 채팅방ID 삭제
+    /**
+     * 유저 세션정보와 맵핑된 채팅방ID 삭제
+     * @param sessionId
+     */
     public void removeUserEnterInfo(String sessionId) {
         opsHashEnterInfo.delete(ENTER_INFO, sessionId);
     }
 
-    // 채팅방 유저수 조회
+    /**
+     * 채팅방 유저수 조회
+     * @param roomId
+     * @return
+     */
     public long getUserCount(String roomId) {
 //    public long getUserCount(String sessionId, String roomId) {
 //        opsHashEnterInfo.get(ROOM_NUM_STATE, sessionId, roomId);
         return Long.parseLong((String) Optional.ofNullable(opsFinder.get(USER_COUNT + "_" + roomId)).orElse("0"));
     }
 
-    // 채팅방에 입장한 유저수 +1
+    /**
+     * 채팅방에 입장한 유저수 +1
+     * @param roomId
+     * @return
+     */
     public long plusUserCount(String roomId) {
 //    public long plusUserCount(String sessionId, String roomId) {
         log.info(String.valueOf(opsFinder));
@@ -63,8 +81,11 @@ public class ChatRoomInfoService {
         return Optional.ofNullable(opsFinder.increment(USER_COUNT + "_" + roomId)).orElse(0L);
     }
 
-    // 채팅방에 입장한 유저수 -1
-    // FIXME: 2022/07/24  roomid와 sessionId를 묶어서 처리
+    /**
+     * 채팅방에 입장한 유저수 -1
+     * @param roomId
+     * @return
+     */
     public long minusUserCount(String roomId) {
 //    public long minusUserCount(String sessionId, String roomId) {
 //        opsHashEnterInfo.delete(ROOM_NUM_STATE, sessionId, roomId);
@@ -73,6 +94,8 @@ public class ChatRoomInfoService {
 
     /**
      * destination정보에서 roomId 추출
+     * @param destination
+     * @return
      */
     public String getRoomId(String destination) {
         int lastIndex = destination.lastIndexOf('/');

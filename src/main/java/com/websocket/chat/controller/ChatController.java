@@ -19,15 +19,6 @@ public class ChatController {
      *
      * @param message
      */
-//    @MessageMapping("/chat/message")
-//    public void message(ChatMessage message) {
-//        if (MessageType.ENTER.equals(message.getType())) {
-//            chatRoomService.enterChatRoom(message.getRoomId());
-//            message.setMessage(message.getSender() + "님이 입장하셨습니다.");
-//        }
-//        // Websocket에 발행된 메시지를 redis로 발행
-//        redisPublisher.publish(chatRoomService.getTopic(message.getRoomId()), message);
-//    }
     @MessageMapping("/chat/message")
     public void message(ChatMessage message) {
         MessageType values = message.getType();

@@ -20,8 +20,8 @@ import java.util.concurrent.ConcurrentMap;
 @RequiredArgsConstructor
 public class ChatRoomService {
     private static final String CHAT_ROOMS = "CHAT_ROOM"; // Redis
-    private static final String USER_COUNT = "USER_COUNT"; // Redis
-    private static final String ENTER_INFO = "ENTER_INFO"; // Redis
+//    private static final String USER_COUNT = "USER_COUNT"; // Redis
+//    private static final String ENTER_INFO = "ENTER_INFO"; // Redis
 
     private final RedisSubscriber redisSubscriber; // 구독 처리 서비스
     private final RedisTemplate<String, Object> redisTemplate;
@@ -36,7 +36,9 @@ public class ChatRoomService {
     }
 
     /**
-     * 채팅방 생성 : 서버간 채팅방 공유를 위해 redis hash에 저장한다.
+     * 채팅방 생성 : 서버간 채팅방 공유를 위해 redis hash에 저장
+     * @param name
+     * @return
      */
     public ChatRoom createChatRoom(String name) {
         ChatRoom chatRoom = ChatRoom.builder()
@@ -51,8 +53,13 @@ public class ChatRoomService {
         return chatRoom;
     }
 
+    public ChannelTopic getTopic(String roomId) {
+        return topics.get(roomId);
+    }
+
     /**
-     * 채팅방 입장 : redis에 topic을 만들고 pub/sub 통신을 하기 위해 리스너를 설정한다.
+     * 채팅방 입장 : redis에 topic을 만들고 pub/sub 통신을 하기 위해 리스너를 설정
+     * @param roomId
      */
     public void enterChatRoom(String roomId) {
         log.info("방입장: {}" , roomId);
@@ -65,9 +72,4 @@ public class ChatRoomService {
         redisMessageListener.addMessageListener(redisSubscriber, topic);
         topics.put(roomId, topic);
     }
-
-    public ChannelTopic getTopic(String roomId) {
-        return topics.get(roomId);
-    }
-
 }
