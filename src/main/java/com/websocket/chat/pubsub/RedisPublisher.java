@@ -16,7 +16,8 @@ public class RedisPublisher {
     private final CurseWordFilter curseWordFilter;
 
     public void publish(ChannelTopic topic, ChatMessage message) throws IOException {
-        message.setMessage(curseWordFilter.findSimilarity(message.getMessage()));
+//        message.setMessage(curseWordFilter.findSimilarity(message.getMessage()));
+        message.setMessage(curseWordFilter.advancedFindSimilarity(message.getMessage()));
         redisTemplate.convertAndSend(topic.getTopic(), message);
     }
 }

@@ -1,18 +1,18 @@
 package com.websocket.chat.filter;
 
+import com.websocket.chat.service.WordDisassembleService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
+@Slf4j
 @Component
 @RequiredArgsConstructor
 public class CurseWordFilter {
-//    private final CurseWordList curseWordList;
-//    private final RedisTemplate<String, List<String>> redisTemplate;
-
+    private final WordDisassembleService wordDisassembleService;
     public int getLevenshteinDistance(String X, String Y) {
         int m = X.length();
         int n = Y.length();
@@ -41,21 +41,17 @@ public class CurseWordFilter {
         List<String> filteredCursedWord = new ArrayList<>();
         List<String> curseWordList = new ArrayList<>();
 
-        File file = new File("fword_list.txt"); //파일 객체 생성
-        FileReader filereader = new FileReader(file); //입력 스트림 생성
-        BufferedReader bufReader = new BufferedReader(filereader); //입력 버퍼 생성
+        File file = new File("fword_list.txt"); // 파일 객체 생성
+        FileReader filereader = new FileReader(file); // 입력 스트림 생성
+        BufferedReader bufReader = new BufferedReader(filereader); // 입력 버퍼 생성
         String line = "";
         while ((line = bufReader.readLine()) != null) { // readLine()은 끝에 개행문자를 읽지 않는다.
             curseWordList.add(line);
         }
-        bufReader.close();
-
-//        ObjectMapper mapper = new ObjectMapper();
-//        List<String> jsonInString = Collections.singletonList(mapper.writeValueAsString(curseWordList));
-//        redisTemplate.opsForValue().set("욕설리스트", jsonInString);
+        bufReader.close(); // 비속어 불러오기 끝
 
         if (inputWord == null) {
-            throw new IllegalArgumentException("Strings must not be null");
+            throw new IllegalArgumentException("채팅방에 메시지를 적어주세요.");
         }
 
         double maxLength = inputWord.length();
@@ -64,11 +60,12 @@ public class CurseWordFilter {
 
         for (String curseWord : curseWordList) {
             if (maxLength > 0) {
-                // 필요한 경우 선택적으로 대소문자를 무시합니다.
+
                 result = (maxLength - getLevenshteinDistance(inputWord, curseWord)) / maxLength;
                 resultList.add(result);
             }
         }
+
         double maxNum = resultList.get(0);
         for (double j : resultList) {
             if (j > maxNum)
@@ -87,6 +84,75 @@ public class CurseWordFilter {
 
         StringBuilder filtered = new StringBuilder();
         for (String string : filteredCursedWord) {
+            filtered.append(string);
+        }
+
+        return String.valueOf(filtered);
+    }
+
+    public String advancedFindSimilarity(String message) throws IOException {
+        List<String> curseWordList = new ArrayList<>(); // fword_list에 있는 단어를 담는 list
+        File file = new File("fword_list.txt"); // 파일 객체 생성
+        FileReader filereader = new FileReader(file); // 입력 스트림 생성
+        BufferedReader bufReader = new BufferedReader(filereader); // 입력 버퍼 생성
+
+        String line = "";
+        while ((line = bufReader.readLine()) != null) { // readLine()은 끝에 개행문자를 읽지 않는다.
+            curseWordList.add(line);
+        }
+        bufReader.close();
+
+        if (message == null) {
+            throw new IllegalArgumentException("Strings must not be null");
+        }
+
+        double maxLength = message.length();
+        double result = 0;
+//        List<Double> resultList = new ArrayList<>();
+        Map<Double, String> curseWordsValues = new HashMap<>();
+
+        for (int i = 0; i < curseWordList.size(); i++) {
+            if (maxLength > 0) {
+                // 필요한 경우 선택적으로 대소문자를 무시합니다.
+                result = (maxLength - getLevenshteinDistance(message, curseWordList.get(i))) / maxLength;
+                curseWordsValues.put(result, curseWordList.get(i));
+            }
+        }
+
+        System.out.println("curseWordsValues = " + curseWordsValues);
+
+        Double maxNum = Collections.max(curseWordsValues.keySet());
+        String maxValue = curseWordsValues.get(maxNum);
+
+        System.out.println("maxNum = " + maxNum);
+        System.out.println("maxValue = " + maxValue);
+
+        String decomposedMaxValue = wordDisassembleService.decompose(maxValue);
+        String decomposedInputWord = wordDisassembleService.decompose(message);
+
+        System.out.println("decomposedMaxValue = " + decomposedMaxValue);
+        System.out.println("decomposedInputWord = " + decomposedInputWord);
+
+        int maxNumBetween = Math.max(decomposedMaxValue.length(), decomposedInputWord.length());
+        int minNumBetween = Math.min(decomposedMaxValue.length(), decomposedInputWord.length());
+
+        result = getLevenshteinDistance(decomposedInputWord, decomposedMaxValue);
+
+        double gapBetween = (double) 1 - (result / maxNumBetween);
+        System.out.println("gapBetween = " + gapBetween);
+
+        List<String> stars = new ArrayList<>(); // 필터링 되어 비속어가 ***가 될 단어
+
+        if (gapBetween >= 0.66) {
+            for (int i = 0; i < message.length(); i++) {
+                stars.add("*");
+            }
+        } else {
+            return message;
+        }
+
+        StringBuilder filtered = new StringBuilder();
+        for (String string : stars) {
             filtered.append(string);
         }
 

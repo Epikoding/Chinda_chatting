@@ -20,9 +20,6 @@ import java.util.concurrent.ConcurrentMap;
 @RequiredArgsConstructor
 public class ChatRoomService {
     private static final String CHAT_ROOMS = "CHAT_ROOM"; // Redis
-//    private static final String USER_COUNT = "USER_COUNT"; // Redis
-//    private static final String ENTER_INFO = "ENTER_INFO"; // Redis
-
     private final RedisSubscriber redisSubscriber; // 구독 처리 서비스
     private final RedisTemplate<String, Object> redisTemplate;
     private final RedisMessageListenerContainer redisMessageListener; // 채팅방(topic)에 발행되는 메시지를 처리할 Listener
