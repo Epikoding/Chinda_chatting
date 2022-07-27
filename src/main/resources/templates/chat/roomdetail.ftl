@@ -71,6 +71,9 @@
                 },
                 recvMessage: function(recv) {
                     this.messages.unshift({"type":recv.type,"sender":recv.type=='ENTER'?'[알림]':recv.sender,"message":recv.message})
+                },
+                exitMessage: function(recv) {
+                    this.messages.unshift({"type":recv.type,"sender":recv.type=='EXIT'?'[알림]':recv.sender,"message":recv.message})
                 }
             }
         });

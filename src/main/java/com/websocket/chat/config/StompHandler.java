@@ -47,7 +47,7 @@ public class StompHandler implements ChannelInterceptor {
                 userCount = 0;
             }
 
-            log.info("roomId: {}", String.valueOf(chatRoomInfoService.getUserCount(roomId))); // 채팅방의 인원수 표시
+            log.info("방 인원 수: {}", String.valueOf(chatRoomInfoService.getUserCount(roomId))); // 채팅방의 인원수 표시
             log.info("SUBSCRIBED sessionId: {}, roomId: {}", sessionId, roomId);
 
         } else if (StompCommand.DISCONNECT == accessor.getCommand()) { // Websocket 연결 종료
@@ -59,7 +59,7 @@ public class StompHandler implements ChannelInterceptor {
             chatRoomInfoService.removeUserEnterInfo(sessionId);
             chatRoomInfoService.minusUserCount(roomId); // 채팅방의 인원수 -1
 
-            log.info("roomId: {}", String.valueOf(chatRoomInfoService.getUserCount(roomId))); // 채팅방의 인원수 표시
+            log.info("방 인원 수: {}", String.valueOf(chatRoomInfoService.getUserCount(roomId))); // 채팅방의 인원수 표시
             log.info("DISCONNECTED sessionId: {}, roomId: {}", sessionId, roomId);
         }
         return message;
