@@ -69,12 +69,15 @@ public class WordDisassembleService {
                 char jong = (char) (uniVal % 28);    // 종성의 첫번째는 채움이기 때문에
 
                 decomposedWordList.add(chosung_list[cho] + jungsung_list[joong] + jongsung_list[jong]);
-            } else if (0x3131 <= uniVal || uniVal <= 0x314e) {
+
+            } else if (0x3131 <= uniVal || uniVal <= 0x314e) { // 'ㅋ', 'ㅅㄱ'와 같은 자음은 분리하는 과정을 거치지 않음
                 decomposedWordList.add(String.valueOf(uniVal));
+
             } else {
                 log.info(uniVal + " => " + uniVal);
             }
         }
+
         String decomposedWord = String.join("", decomposedWordList);
         log.info("decomposedWordList = {}", decomposedWordList);
 

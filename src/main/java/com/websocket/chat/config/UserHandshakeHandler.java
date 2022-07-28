@@ -22,8 +22,6 @@ public class UserHandshakeHandler extends DefaultHandshakeHandler {
         String url = request.getURI().toString();
         String userName = url.split("=")[1];
 
-        LOG.info("UserHandshakeHandler, userName: {}", userName);
-
         return new UserPrincipal(userName);
     }
 }
