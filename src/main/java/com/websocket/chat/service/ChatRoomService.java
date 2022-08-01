@@ -33,9 +33,9 @@ public class ChatRoomService {
     }
 
     /**
-     * 채팅방 생성 : 서버간 채팅방 공유를 위해 redis hash에 저장
-     * @param name
-     * @return
+     * 채팅방 생성: 서버간 채팅방 공유를 위해 redis hash에 저장
+     * @param name: 유저가 채팅방 이름을 넣으면 해당 이름으로 방 생성
+     * @return ChatRoom을 생성하고 해당 방을 redis에 등록
      */
     public ChatRoom createChatRoom(String name) {
         ChatRoom chatRoom = ChatRoom.builder()
@@ -50,13 +50,18 @@ public class ChatRoomService {
         return chatRoom;
     }
 
+    /**
+     * roomId로 topic 생성
+     * @param roomId
+     * @return: 만들어진 topic을 topics에 추가
+     */
     public ChannelTopic getTopic(String roomId) {
         return topics.get(roomId);
     }
 
     /**
      * 채팅방 입장 : redis에 topic을 만들고 pub/sub 통신을 하기 위해 리스너를 설정
-     * @param roomId
+     * @param roomId: 세션id로 topic을 만들고 해당 topic을 topics에 추가
      */
     public void enterChatRoom(String roomId) {
         log.info("방입장: {}" , roomId);

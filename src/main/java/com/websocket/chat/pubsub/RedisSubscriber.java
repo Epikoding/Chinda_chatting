@@ -21,7 +21,7 @@ public class RedisSubscriber implements MessageListener {
 
 
     /**
-     * Redis에서 메시지가 발행(publish)되면 대기하고 있던 onMessage가 해당 메시지를 받아 처리
+     * redistemplate에 있는 메시지를 읽어오고 해당 메시지를 채팅 방에 전달
      * @param message message must not be {@literal null}.
      * @param pattern pattern matching the channel (if specified) - can be {@literal null}.
      */

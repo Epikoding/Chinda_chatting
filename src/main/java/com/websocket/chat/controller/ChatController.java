@@ -17,9 +17,9 @@ public class ChatController {
     private final ChatRoomService chatRoomService;
 
     /**
-     * websocket, /pub/chat/message으로 들어오는 메시징을 처리
-     *
-     * @param message
+     * 유저가 pub한 메시지를 처리. 메시지에 있는 value를 뽑아와 해당 메시지의 type을 확인
+     * @param message: 유저가 pub한 메시지
+     * @throws IOException
      */
     @MessageMapping("/chat/message")
     public void message(ChatMessage message) throws IOException {

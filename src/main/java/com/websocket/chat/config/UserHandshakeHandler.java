@@ -13,7 +13,13 @@ import java.util.Map;
 
 @Slf4j
 public class UserHandshakeHandler extends DefaultHandshakeHandler {
-
+    /**
+     * uri를 통해 어떤 유저가 메시지를 보낸 것인지 확인
+     * @param request the handshake request
+     * @param wsHandler the WebSocket handler that will handle messages
+     * @param attributes handshake attributes to pass to the WebSocket session
+     * @return
+     */
     @Override
     protected Principal determineUser(ServerHttpRequest request, WebSocketHandler wsHandler, Map<String, Object> attributes) {
         log.info("URL: " + String.valueOf(request.getURI()));

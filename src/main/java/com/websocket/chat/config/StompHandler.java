@@ -22,11 +22,17 @@ import java.util.Optional;
 public class StompHandler implements ChannelInterceptor {
     private final ChatRoomInfoService chatRoomInfoService;
 
+    /**
+     * 메시지의 전처리를 함. 메시지의 헤어에 담긴 accessor의 타입에 따라 처리하는 방법이 달라짐.
+     * @param message: 들어온 메시지
+     * @param channel: 세션id
+     * @return: message 리턴
+     */
     @Override
     public Message<?> preSend(Message<?> message, MessageChannel channel) {
         StompHeaderAccessor accessor = StompHeaderAccessor.wrap(message);
 
-        if (StompCommand.CONNECT == accessor.getCommand()) { // websocket 연결요청
+        if (StompCommand.CONNECT == accessor.getCommand()) { // websocket 연결 요청
             log.info("CONNECT accessor = " + accessor);
 
         } else if (StompCommand.SUBSCRIBE == accessor.getCommand()) { // websocket 구독 요청

@@ -16,6 +16,13 @@ import java.util.*;
 public class CurseWordFilter {
     private final WordDisassembleService wordDisassembleService;
     private final CurseWordRepository curseWordRepository;
+
+    /**
+     * 레벨슈타인 거리를 계산
+     * @param X: 비교군 단어
+     * @param Y: 대조군 단어
+     * @return: 거리 계산
+     */
     public int getLevenshteinDistance(String X, String Y) {
         int m = X.length();
         int n = Y.length();
@@ -92,6 +99,12 @@ public class CurseWordFilter {
         return String.valueOf(filtered);
     }
 
+    /**
+     * 들어온 단어가 얼마나 비속어랑 비슷한지 계산
+     * @param message: 들어온 단어
+     * @return: 필터링(이 필요하다면 필터링된) 단어를 포함한 문장을 재구성해 return
+     * @throws IOException
+     */
     public String advancedFindSimilarity(String message) throws IOException {
         List<String> curseWordList = curseWordRepository.readCurseWords();
 
@@ -115,7 +128,7 @@ public class CurseWordFilter {
                 Double maxNum = Collections.max(allCurseWordsValues.keySet()); //potentialRate가 가장 높은 값
                 log.info("{}이 비속어일 1차 확률 {}", eachWord, maxNum);
 
-                if (maxNum >= 0.5) { // 귀무가설(H_0) 기각역 a < 0.5. 비속어일 가능성이 절반 이상이면
+                if (maxNum >= 0.5) { // correlation coefficient r >= 0.5. 비속어일 가능성이 절반 이상이면
                     String maxValue = allCurseWordsValues.get(maxNum); // maxNum의 값의 value
 
                     String decomposedMaxValue = wordDisassembleService.decompose(maxValue); // 초성 중성 종성으로 분해

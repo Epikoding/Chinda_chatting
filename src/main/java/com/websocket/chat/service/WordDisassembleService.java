@@ -41,6 +41,9 @@ public class WordDisassembleService {
 //        System.out.println("moum_end = " + moum_end);
 //    }
 
+    /**
+     * 초성, 중성, 종성을 받아와 한 단어로 만듬.
+     */
     public char compose(String chosung, String jungsung, String jongsung) {
         char oneWord;
         oneWord =
@@ -53,6 +56,9 @@ public class WordDisassembleService {
     }
 
     /**
+     * 한 단어를 초성, 중성, 종성으로 분해.
+     * @param text: 띄어쓰기를 기준으로 분해된 한 단어.
+     * @return: 한 단어의 문자를 기준으로 리스트로 반환.
      * https://needjarvis.tistory.com/644 참고
      */
     public String decompose(String text) {

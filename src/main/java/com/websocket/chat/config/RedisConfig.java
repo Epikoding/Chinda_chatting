@@ -21,7 +21,6 @@ public class RedisConfig {
      * @param connectionFactory
      * @return
      */
-
     private final RedisProperties redisProperties;
     @Bean
     public RedisMessageListenerContainer redisMessageListener(RedisConnectionFactory connectionFactory) {
@@ -30,6 +29,10 @@ public class RedisConfig {
         return container;
     }
 
+    /**
+     * redis port 설정
+     * @return
+     */
     @Bean
     public RedisConnectionFactory redisConnectionFactory() {
         return new LettuceConnectionFactory("localhost",6379);

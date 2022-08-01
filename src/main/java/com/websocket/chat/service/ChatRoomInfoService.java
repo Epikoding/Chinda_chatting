@@ -28,9 +28,9 @@ public class ChatRoomInfoService {
     }
 
     /**
-     * 유저가 입장한 채팅방ID와 유저 세션ID 맵핑 정보 저장
-     * @param sessionId
-     * @param roomId
+     * 유저가 입장한 채팅방id와 유저 세션id 맵핑 정보 저장
+     * @param sessionId: 유저 세션id
+     * @param roomId : 채팅방id
      */
     public void setUserEnterInfo(String sessionId, String roomId) {
         log.info(sessionId);
@@ -42,17 +42,16 @@ public class ChatRoomInfoService {
     }
 
     /**
-     * 유저 세션으로 입장해 있는 채팅방 ID 조회
-     * @param sessionId
-     * @return
+     * 유저 세션id로 입장해 있는 채팅방id 조회
+     * @param sessionId: 유저 세션id
      */
     public String getUserEnterRoomId(String sessionId) {
         return opsHashEnterInfo.get(ENTER_INFO, sessionId);
     }
 
     /**
-     * 유저 세션정보와 맵핑된 채팅방ID 삭제
-     * @param sessionId
+     * 유저 세션id와 맵핑된 채팅방id 삭제
+     * @param sessionId: 유저 세션id
      */
     public void removeUserEnterInfo(String sessionId) {
         opsHashEnterInfo.delete(ENTER_INFO, sessionId);
@@ -60,35 +59,29 @@ public class ChatRoomInfoService {
 
     /**
      * 채팅방 유저수 조회
-     * @param roomId
-     * @return
+     * @param roomId: 채팅방id
+     * @return: 해당 방에 몇명이 있는지 조회하고 아무도 없다면 0
      */
     public long getUserCount(String roomId) {
-//    public long getUserCount(String sessionId, String roomId) {
-//        opsHashEnterInfo.get(ROOM_NUM_STATE, sessionId, roomId);
         return Long.parseLong((String) Optional.ofNullable(opsFinder.get(USER_COUNT + "_" + roomId)).orElse("0"));
     }
 
     /**
      * 채팅방에 입장한 유저수 +1
-     * @param roomId
-     * @return
+     * @param roomId: 채팅방id
+     * @return: 해당 채팅방에 숫자 1을 더하지만 해당 방이 없다면 0
      */
     public long plusUserCount(String roomId) {
-//    public long plusUserCount(String sessionId, String roomId) {
         log.info(String.valueOf(opsFinder));
-//        opsHashEnterInfo.put(ROOM_NUM_STATE, sessionId, roomId);
         return Optional.ofNullable(opsFinder.increment(USER_COUNT + "_" + roomId)).orElse(0L);
     }
 
     /**
      * 채팅방에 입장한 유저수 -1
-     * @param roomId
-     * @return
+     * @param roomId: 채팅방id
+     * @return: 해당 채팅방에 숫자가 0을 초과하면 1을 빼지만 해당 방이 없다면 0
      */
     public long minusUserCount(String roomId) {
-//    public long minusUserCount(String sessionId, String roomId) {
-//        opsHashEnterInfo.delete(ROOM_NUM_STATE, sessionId, roomId);
         return Optional.ofNullable(opsFinder.decrement(USER_COUNT + "_" + roomId)).filter(count -> count > 0).orElse(0L);
     }
 

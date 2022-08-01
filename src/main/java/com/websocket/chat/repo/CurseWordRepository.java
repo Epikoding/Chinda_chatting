@@ -14,6 +14,10 @@ public class CurseWordRepository {
     private final RedisTemplate<String, String> redisTemplate; // 캐스팅이 되기에 String, Object를 할 필요가 없음
     final List<String> curseWordList = new ArrayList<>(); // fword_list가 담길 list
 
+    /**
+     * fword_list.txt를 읽어와 redis에 등록
+     * @throws IOException
+     */
     public void saveCurseWords() throws IOException {
         File file = new File("fword_list.txt"); // 비속어.txt 불러오기
         FileReader filereader = new FileReader(file); // 입력 스트림 생성
@@ -27,6 +31,10 @@ public class CurseWordRepository {
         redisTemplate.opsForList().rightPushAll("fword_list", curseWordList);
     }
 
+    /**
+     * redis에 등록된 fword_list를 불러옴
+     * @return
+     */
     public List<String> readCurseWords() {
         long fwordListEnd = redisTemplate.opsForList().size("fword_list") - 1;
         List<String> fword_list = redisTemplate.opsForList().range("fword_list", 0, fwordListEnd);
