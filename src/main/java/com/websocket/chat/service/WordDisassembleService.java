@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
 @Slf4j
 @Service
@@ -19,11 +20,11 @@ public class WordDisassembleService {
             {"ㄱ", "ㄲ", "ㄳ", "ㄴ", "ㄵ", "ㄶ", "ㄷ", "ㄸ", "ㄹ", "ㄺ", "ㄻ", "ㄼ", "ㄽ", "ㄾ", "ㄿ", "ㅀ", "ㅁ", "ㅂ", "ㅃ", "ㅄ", "ㅅ", "ㅆ", "ㅇ", "ㅈ", "ㅉ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ"};
     final static String[] moum_list =
             {"ㅏ", "ㅐ", "ㅑ", "ㅒ", "ㅓ", "ㅔ", "ㅕ", "ㅖ", "ㅗ", "ㅘ", "ㅙ", "ㅚ", "ㅛ", "ㅜ", "ㅝ", "ㅞ", "ㅟ", "ㅠ", "ㅡ", "ㅢ", "ㅣ"};
-
-    char kor_begin = 44032; //가
-    char kor_end = 55203; //힣
+    final static String[] specialChar = {"!","@","#","$","%","^","&","*","(",")",",",".","?","{","}","|","<",">","[","]","\\", "'", "\"", " "};
     char chosung_base = 588;
     char jungsung_base = 28;
+    char kor_begin = 44032; //가
+    char kor_end = 55203; //힣
     char jaum_begin = 12593; //ㄱ
     char jaum_end = 12622; //ㅎ
     char moum_begin = 12623; //ㅏ
@@ -71,6 +72,12 @@ public class WordDisassembleService {
                 decomposedWordList.add(chosung_list[cho] + jungsung_list[joong] + jongsung_list[jong]);
 
             } else if (0x3131 <= uniVal || uniVal <= 0x314e) { // 'ㅋ', 'ㅅㄱ'와 같은 자음은 분리하는 과정을 거치지 않음
+                decomposedWordList.add(String.valueOf(uniVal));
+
+            } else if ((uniVal>=0x21 && uniVal<=0x2f) // '!', '?' 와 같은 특수문자 예외처리
+                    || (uniVal>=0x3a && uniVal<=0x40)
+                    || (uniVal>=0x5b && uniVal<=0x60)
+                    || (uniVal>=0x7b && uniVal<=0x7e)){
                 decomposedWordList.add(String.valueOf(uniVal));
 
             } else {

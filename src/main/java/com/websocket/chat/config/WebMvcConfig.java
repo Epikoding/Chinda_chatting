@@ -9,8 +9,15 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
+                .allowedOrigins("*")
                 .allowedOrigins("http://localhost:3000")
-                .allowedMethods("POST", "GET", "PUT", "DELETE", "HEAD", "OPTIONS")
+                .allowedOrigins("https://localhost:8080")
+                .allowedOrigins("http://localhost:8080")
+                .allowedOrigins("https://chinda.live")
+                .allowedOrigins("https://www.chinda.live")
+                .allowedOrigins("https://www.epikoding.shop")
+                .allowedOrigins("https://epikoding.shop")
+                .allowedMethods("POST", "GET", "PUT", "DELETE", "HEAD", "OPTIONS", "UPGRADE")
                 .allowCredentials(true)
                 .exposedHeaders("Authorization");
     }

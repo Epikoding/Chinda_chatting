@@ -32,8 +32,7 @@ public class CurseWordFilter {
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
                 cost = X.charAt(i - 1) == Y.charAt(j - 1) ? 0 : 1;
-                T[i][j] = Integer.min(Integer.min(T[i - 1][j] + 1, T[i][j - 1] + 1),
-                        T[i - 1][j - 1] + cost);
+                T[i][j] = Integer.min(Integer.min(T[i - 1][j] + 1, T[i][j - 1] + 1), T[i - 1][j - 1] + cost);
             }
         }
 
@@ -100,7 +99,7 @@ public class CurseWordFilter {
             throw new IllegalArgumentException("채팅창에 아무것도 안 치고 엔터쳤음.");
         }
 
-        List<String> messageArray = Arrays.asList(message.split(" ")); // 띄어쓰기를 기준으로 분리된 메세지가 담기는 list
+        String[] messageArray = message.split(" "); // 띄어쓰기를 기준으로 분리된 메세지가 담기는 list
         Map<Double, String> allCurseWordsValues = new HashMap<>(); // {비속어 매칭률}, {fword_list의 비속어} map
         List<String> messageToList = new ArrayList<>(); // message가 필터링되어 담길 list
 
@@ -140,7 +139,7 @@ public class CurseWordFilter {
                         messageToList.add(String.valueOf(filteredWord)); // 비속어를 새롭게 만들어진 문장 리스트에 넣어주고
 
                     } else {
-                        return eachWord; // 비속어가 아닌거라면 메시지에서 분할된 단어 가져오고
+                        return eachWord; // 비속어가 아닌거라면 메시지에서 원래 단어 가져오고
                     }
                 } else {
                     messageToList.add(eachWord); // 비속어가 아닌 단어를 문장 리스트에 넣어줌
@@ -153,7 +152,7 @@ public class CurseWordFilter {
         for (String string : messageToList) {
             filtered.append(string).append(" "); // 단어를 넣어주면서 원래 문장 크기로 복원
         }
-
+        log.info(String.valueOf(filtered));
         return filtered.toString();
     }
 }

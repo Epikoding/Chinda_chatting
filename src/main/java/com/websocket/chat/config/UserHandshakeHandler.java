@@ -13,7 +13,6 @@ import java.util.Map;
 
 @Slf4j
 public class UserHandshakeHandler extends DefaultHandshakeHandler {
-    private final Logger LOG = LoggerFactory.getLogger(UserHandshakeHandler.class);
 
     @Override
     protected Principal determineUser(ServerHttpRequest request, WebSocketHandler wsHandler, Map<String, Object> attributes) {

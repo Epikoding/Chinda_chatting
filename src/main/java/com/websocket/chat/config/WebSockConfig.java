@@ -11,11 +11,14 @@ import org.springframework.web.socket.config.annotation.*;
 @RequiredArgsConstructor
 public class WebSockConfig implements WebSocketMessageBrokerConfigurer {
     private final StompHandler stompHandler;
+    private final AgentWebSocketHandlerDecoratorFactory decoratorFactory;
 
     @Override
     public void configureWebSocketTransport(WebSocketTransportRegistration registry) {
-        registry.setTimeToFirstMessage(30 * 60 * 10000) // 10000 = 1초
+        registry.setDecoratorFactories(decoratorFactory)
+                .setTimeToFirstMessage(30 * 60 * 10000) // 10000 = 1초
                 .setSendTimeLimit(30 * 60 * 10000); // 30분 설정
+
     }
 
     @Override
@@ -28,7 +31,12 @@ public class WebSockConfig implements WebSocketMessageBrokerConfigurer {
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/ws-stomp")
                 .setHandshakeHandler(new UserHandshakeHandler())
-                .setAllowedOrigins("http://localhost:3000")
+                .setAllowedOriginPatterns("*")
+                .setAllowedOrigins("epikoding.shop")
+                .setAllowedOrigins("www.epikoding.shop")
+                .setAllowedOrigins("localhost:3000")
+                .setAllowedOrigins("chinda.live")
+                .setAllowedOrigins("www.chinda.live")
                 .withSockJS();
     }
 
@@ -39,3 +47,4 @@ public class WebSockConfig implements WebSocketMessageBrokerConfigurer {
 
 
 }
+
