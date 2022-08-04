@@ -50,8 +50,7 @@
 ---
 
 # 📼 <친다/> Demo Youtube
->아래 링크를 클릭하시면 `<친다/>` 게임 플레이 영상을 시청하실 수 있습니다 🙋🏻
->http://img.youtube.com/vi/b6rNFH3fR3o
+[이 링크를 클릭하시면 `<친다/>` 게임 플레이 영상을 시청하실 수 있습니다 🙆🏻‍♂️](https://youtu.be/b6rNFH3fR3o)
 
 ---
 
