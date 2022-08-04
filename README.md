@@ -51,7 +51,7 @@
 
 # 📼 <친다/> Demo Youtube
 
-![dfgdgd](http://img.youtube.com/vi/b6rNFH3fR3o/0.jpg)
+![이 링크를 클릭하셔서 게임 플레이 영상을 시청하실 수 있습니다 🙋🏻](http://img.youtube.com/vi/b6rNFH3fR3o)
 ---
 
 # 🙋🏻 저희 프로젝트가 더 궁금하신가요? ⤵️
