@@ -6,9 +6,11 @@
 ---
 
 # 📼 <친다/> Demo Youtube
+<video src="https://youtu.be/b6rNFH3fR3o" data-canonical-src="https://youtu.be/b6rNFH3fR3o" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px;">
+</video>
 
-[https://youtu.be/b6rNFH3fR3o](https://youtu.be/b6rNFH3fR3o)
-
+[![Video Label](http://img.youtube.com/vi/b6rNFH3fR3o/0.jpg)](https://youtu.be/b6rNFH3fR3o)
+   
 ---
 
 # 🙋🏻 저희 프로젝트가 더 궁금하신가요? ⤵️
