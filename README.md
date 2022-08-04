@@ -1,5 +1,5 @@
 # 목차
-- [🎮 `<친다/>`: 온라인 코딩 배틀 사이트](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%B9%9C%EB%8B%A4-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%BD%94%EB%94%A9-%EB%B0%B0%ED%8B%80-%EC%82%AC%EC%9D%B4%ED%8A%B8)
+- [🎮 `<친다/>`: 온라인 코딩 배틀 사이트](https://github.com/biolkj28/AlgorithmGameProject-BE#%EC%B9%9C%EB%8B%A4-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%BD%94%EB%94%A9-%EB%B0%B0%ED%8B%80-%EC%82%AC%EC%9D%B4%ED%8A%B8)
 - [📼 <친다/> Demo Youtube](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%B9%9C%EB%8B%A4-demo-youtube)
 - [🙋🏻 저희 프로젝트가 더 궁금하신가요? ⤵️](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%A0%80%ED%9D%AC-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B0%80-%EB%8D%94-%EA%B6%81%EA%B8%88%ED%95%98%EC%8B%A0%EA%B0%80%EC%9A%94-%EF%B8%8F)
 - [🧗🏻‍♀️ 제작 기간 & 팀원 소개](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EF%B8%8F%EC%A0%9C%EC%9E%91-%EA%B8%B0%EA%B0%84--%ED%8C%80%EC%9B%90-%EC%86%8C%EA%B0%9C)
