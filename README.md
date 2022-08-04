@@ -54,15 +54,15 @@
 
 ---
 
-# 🙋🏻 저희 프로젝트가 더 궁금하신가요? ⤵️
+# 🙋🏻 저희 프로젝트가 더 궁금하신가요? ⤵️ 
 
-👉 [<친다/> 이용하러 가기](http://chinda.live) 👈
+👉🏻 [<친다/> 이용하러 가기](http://chinda.live) 👈🏻
 
-👉 [프론트엔드 GitHub](https://github.com/ChoiSungwoo1216/Chin_da_FE) 👈
+👉🏻 [프론트엔드 GitHub](https://github.com/ChoiSungwoo1216/Chin_da_FE) 👈🏻
 
-👉 [백엔드 GitHub](https://github.com/biolkj28/AlgorithmGameProject-BE) (game-server)👈
+👉🏻 [백엔드 GitHub](https://github.com/biolkj28/AlgorithmGameProject-BE) (game-server) 👈🏻
 
-👉 [백엔드 GitHub](https://github.com/Epikoding/Chinda_chatting.git) (chatting-server)👈
+👉🏻 [백엔드 GitHub](https://github.com/Epikoding/Chinda_chatting.git) (chatting-server) 👈🏻
 
 ---
 
