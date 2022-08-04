@@ -5,7 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-
 public class ChatMessage {
     private MessageType type; // 메시지 타입
     private String roomId; // 방번호

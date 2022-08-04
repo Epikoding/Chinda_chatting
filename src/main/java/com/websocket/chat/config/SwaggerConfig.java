@@ -19,7 +19,7 @@ public class SwaggerConfig {
 
                         "Stomp를 사용한 서버.\n\n" +
                         "STOMP 구독\n" +
-                        "1. websocket 연결 주소: /ws-stomp?{username}={username}\n" +
+                        "1. websocket 연결 주소: /ws-stomp?name={username}\n" +
                         "2. 입장자 정보 메세지 주소: /sub/chat/room/{roomId}\n" +
                         "2. 실시간 코드 전송: /room/enter/{roomId} \n")
 
