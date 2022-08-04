@@ -91,7 +91,8 @@
 
 # ****🧰**** 사용 기술 및 툴
 
-<img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white" alt="java"><img alt="spring"
+<img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white" alt="java">
+<img alt="spring"
      src="https://img.shields.io/badge/spring-6DB33F.svg?&style=for-the-badge&logo=spring&logoColor=white"/>
 <img alt="springboot"
      src="https://img.shields.io/badge/spring%20boot-6DB33F.svg?&style=for-the-badge&logo=spring%20boot&logoColor=white"/>
