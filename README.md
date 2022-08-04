@@ -50,14 +50,8 @@
 ---
 
 # 📼 <친다/> Demo Youtube
-<video src="https://youtu.be/b6rNFH3fR3o" data-canonical-src="https://youtu.be/b6rNFH3fR3o" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px;">
-</video>
 
-[![Video Label](http://img.youtube.com/vi/b6rNFH3fR3o/0.jpg)](https://youtu.be/b6rNFH3fR3o)
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=nTQUwghvy5Q" target="_blank">
- <img src="http://img.youtube.com/vi/nTQUwghvy5Q/mqdefault.jpg" alt="Watch the video" width="240" height="180" border="10" />
-</a>
+![dfgdgd](http://img.youtube.com/vi/b6rNFH3fR3o/0.jpg)
 ---
 
 # 🙋🏻 저희 프로젝트가 더 궁금하신가요? ⤵️
