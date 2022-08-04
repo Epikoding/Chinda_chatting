@@ -5,7 +5,7 @@
 - [🧗🏻‍♀️ 제작 기간 & 팀원 소개](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EF%B8%8F%EC%A0%9C%EC%9E%91-%EA%B8%B0%EA%B0%84--%ED%8C%80%EC%9B%90-%EC%86%8C%EA%B0%9C)
   * [📆 제작 기간](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%A0%9C%EC%9E%91-%EA%B8%B0%EA%B0%84)
   * [👫🏻 팀원소개](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%ED%8C%80%EC%9B%90%EC%86%8C%EA%B0%9C)
-- [****🧰**** **사용 기술 및 툴**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%82%AC%EC%9A%A9-%EA%B8%B0%EC%88%A0-%EB%B0%8F-%ED%88%B4)
+- [****🧰**** 사용 기술 및 툴](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%82%AC%EC%9A%A9-%EA%B8%B0%EC%88%A0-%EB%B0%8F-%ED%88%B4)
 - [🛠️  서비스 아키텍쳐](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EF%B8%8F-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90)
 - [🔧 기술적 의사결정](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%EA%B8%B0%EC%88%A0%EC%A0%81-%EC%9D%98%EC%82%AC%EA%B2%B0%EC%A0%95)
   * [🌝 Back-end](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#back-end)
@@ -92,7 +92,7 @@
 
 ---
 
-# ****🧰**** **사용 기술 및 툴**
+# ****🧰**** 사용 기술 및 툴
 
 <img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white" alt="java"><img alt="spring"
      src="https://img.shields.io/badge/spring-6DB33F.svg?&style=for-the-badge&logo=spring&logoColor=white"/>
