@@ -16,7 +16,7 @@
     + [🏷 버퍼 사이즈 부족 문제 발생](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%EB%B2%84%ED%8D%BC-%EC%82%AC%EC%9D%B4%EC%A6%88-%EB%B6%80%EC%A1%B1-%EB%AC%B8%EC%A0%9C-%EB%B0%9C%EC%83%9D)
     + [**🏷** 입장 메시지 전송 되지 않는 문제 발생](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%EC%9E%85%EC%9E%A5-%EB%A9%94%EC%8B%9C%EC%A7%80-%EC%A0%84%EC%86%A1-%EB%90%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EB%AC%B8%EC%A0%9C-%EB%B0%9C%EC%83%9D)
     + [🏷 중복 로그인이 되는 문제 발생](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%EC%A4%91%EB%B3%B5-%EB%A1%9C%EA%B7%B8%EC%9D%B8%EC%9D%B4-%EB%90%98%EB%8A%94-%EB%AC%B8%EC%A0%9C-%EB%B0%9C%EC%83%9D)
-    + [**🏷 비속어와 필터**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EB%B9%84%EC%86%8D%EC%96%B4%EC%99%80-%ED%95%84%ED%84%B0)
+    + [🏷 비속어와 필터](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EB%B9%84%EC%86%8D%EC%96%B4%EC%99%80-%ED%95%84%ED%84%B0)
 - [⚙️ ERD](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EF%B8%8Ferd)
   * [MySQL](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#mysql)
 - [📥 FLOW-CHART](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#flow-chart)
@@ -219,9 +219,9 @@
 > > 
 > > 로그인 시 사용자 전적 정보를 Redis에 담아두고 로그인 시 해당 데이터가 있을 경우 로그아웃 처리 메시지 전달 및 레디스에서 해당 데이터 삭제 후 로그아웃 처리.
 
-### **🏷 비속어와 필터**
+### 🏷 비속어와 필터
 
-> **🏷 비속어와 필터**
+> 🏷 비속어와 필터
 > 
 > 📢 ****토끼****가 비속어라 가정
 > 
