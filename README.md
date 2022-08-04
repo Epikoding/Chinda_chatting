@@ -1,8 +1,8 @@
 # 🎮 `<친다/>` : 온라인 코딩 배틀 사이트
 
 > _화상 및 채팅으로 소통하며 실시간으로 코드를 주고 받으며 진행하는 게임! Java, Javascript, Python 지원!_
-[![](https://blog.kakaocdn.net/dn/ebLQLq/btrISORcNT4/QK0L0DgRrnaikMoS68Xt70/img.png)](https://blog.kakaocdn.net/dn/ebLQLq/btrISORcNT4/QK0L0DgRrnaikMoS68Xt70/img.png)
 
+![Untitled copy](https://user-images.githubusercontent.com/103272978/182850002-30a36ecf-1eb6-436f-9f19-e82233a94ea8.jpg)
 ---
 
 # 📼 <친다/> Demo Youtube
