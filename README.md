@@ -1,4 +1,4 @@
-- [🎮 `<친다/>`: 온라인 코딩 배틀 사이트](#https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%B9%9C%EB%8B%A4-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%BD%94%EB%94%A9-%EB%B0%B0%ED%8B%80-%EC%82%AC%EC%9D%B4%ED%8A%B8)
+- [🎮 `<친다/>`: 온라인 코딩 배틀 사이트](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%B9%9C%EB%8B%A4-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%BD%94%EB%94%A9-%EB%B0%B0%ED%8B%80-%EC%82%AC%EC%9D%B4%ED%8A%B8)
 - [📼 <친다/> Demo Youtube](#---------demo-youtube)
 - [🙋🏻 저희 프로젝트가 더 궁금하신가요? ⤵️](#--------------------------)
 - [🧗🏻‍♀️ **제작 기간 & 팀원 소개**](#-------------------------)
