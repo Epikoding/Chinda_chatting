@@ -2,15 +2,15 @@
 - [🎮 `<친다/>`: 온라인 코딩 배틀 사이트](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%B9%9C%EB%8B%A4-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%BD%94%EB%94%A9-%EB%B0%B0%ED%8B%80-%EC%82%AC%EC%9D%B4%ED%8A%B8)
 - [📼 <친다/> Demo Youtube](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%B9%9C%EB%8B%A4-demo-youtube)
 - [🙋🏻 저희 프로젝트가 더 궁금하신가요? ⤵️](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%A0%80%ED%9D%AC-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B0%80-%EB%8D%94-%EA%B6%81%EA%B8%88%ED%95%98%EC%8B%A0%EA%B0%80%EC%9A%94-%EF%B8%8F)
-- [🧗🏻‍♀️ **제작 기간 & 팀원 소개**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EF%B8%8F%EC%A0%9C%EC%9E%91-%EA%B8%B0%EA%B0%84--%ED%8C%80%EC%9B%90-%EC%86%8C%EA%B0%9C)
+- [🧗🏻‍♀️ 제작 기간 & 팀원 소개](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EF%B8%8F%EC%A0%9C%EC%9E%91-%EA%B8%B0%EA%B0%84--%ED%8C%80%EC%9B%90-%EC%86%8C%EA%B0%9C)
   * [📆 제작 기간](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%A0%9C%EC%9E%91-%EA%B8%B0%EA%B0%84)
-  * [👫🏻 **팀원소개**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%ED%8C%80%EC%9B%90%EC%86%8C%EA%B0%9C)
+  * [👫🏻 팀원소개](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%ED%8C%80%EC%9B%90%EC%86%8C%EA%B0%9C)
 - [****🧰**** **사용 기술 및 툴**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%82%AC%EC%9A%A9-%EA%B8%B0%EC%88%A0-%EB%B0%8F-%ED%88%B4)
 - [🛠️  서비스 아키텍쳐](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EF%B8%8F-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90)
-- [🔧 **기술적 의사결정**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%EA%B8%B0%EC%88%A0%EC%A0%81-%EC%9D%98%EC%82%AC%EA%B2%B0%EC%A0%95)
+- [🔧 기술적 의사결정](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%EA%B8%B0%EC%88%A0%EC%A0%81-%EC%9D%98%EC%82%AC%EA%B2%B0%EC%A0%95)
   * [🌝 Back-end](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#back-end)
 - [****✨**** 핵심기능](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%ED%95%B5%EC%8B%AC%EA%B8%B0%EB%8A%A5)
-- [🔥 **Trouble shooting**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#trouble-shooting)
+- [🔥 Trouble shooting](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#trouble-shooting)
   * [🌝 Back-end](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#back-end-1)
     + [🏷 입장과 준비 시 동시성 문제 발생](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%9E%85%EC%9E%A5%EA%B3%BC-%EC%A4%80%EB%B9%84-%EC%8B%9C-%EB%8F%99%EC%8B%9C%EC%84%B1-%EB%AC%B8%EC%A0%9C-%EB%B0%9C%EC%83%9D)
     + [🏷 버퍼 사이즈 부족 문제 발생](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%EB%B2%84%ED%8D%BC-%EC%82%AC%EC%9D%B4%EC%A6%88-%EB%B6%80%EC%A1%B1-%EB%AC%B8%EC%A0%9C-%EB%B0%9C%EC%83%9D)
@@ -18,7 +18,7 @@
     + [🏷 중복 로그인이 되는 문제 발생](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%EC%A4%91%EB%B3%B5-%EB%A1%9C%EA%B7%B8%EC%9D%B8%EC%9D%B4-%EB%90%98%EB%8A%94-%EB%AC%B8%EC%A0%9C-%EB%B0%9C%EC%83%9D)
     + [**🏷 비속어와 필터**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EB%B9%84%EC%86%8D%EC%96%B4%EC%99%80-%ED%95%84%ED%84%B0)
 - [⚙️ ERD](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EF%B8%8Ferd)
-  * [**MySQL**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#mysql)
+  * [MySQL](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#mysql)
 - [📥 FLOW-CHART](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#flow-chart)
   * [채팅서버](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%B1%84%ED%8C%85%EC%84%9C%EB%B2%84)
   * [게임서버](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EA%B2%8C%EC%9E%84%EC%84%9C%EB%B2%84)
@@ -30,16 +30,16 @@
     + [**게임 진행**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EA%B2%8C%EC%9E%84-%EC%A7%84%ED%96%89)
     + [**방 퇴장**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EB%B0%A9-%ED%87%B4%EC%9E%A5)
     + [**컴파일러 동작**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC-%EB%8F%99%EC%9E%91)
-- [🎤  **마케팅 전략**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%EB%A7%88%EC%BC%80%ED%8C%85-%EC%A0%84%EB%9E%B5)
+- [🎤  마케팅 전략](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%EB%A7%88%EC%BC%80%ED%8C%85-%EC%A0%84%EB%9E%B5)
   * [🏷 항해 99 내 약 2천명의 개발자에게 홍보](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%ED%95%AD%ED%95%B4-99-%EB%82%B4-%EC%95%BD-2%EC%B2%9C%EB%AA%85%EC%9D%98-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%97%90%EA%B2%8C-%ED%99%8D%EB%B3%B4)
   * [🏷 즉각 피드백 반영](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%A6%89%EA%B0%81-%ED%94%BC%EB%93%9C%EB%B0%B1-%EB%B0%98%EC%98%81)
   * [🏷 게임을 재미있게 즐기기 위한 대회](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EA%B2%8C%EC%9E%84%EC%9D%84-%EC%9E%AC%EB%AF%B8%EC%9E%88%EA%B2%8C-%EC%A6%90%EA%B8%B0%EA%B8%B0-%EC%9C%84%ED%95%9C-%EB%8C%80%ED%9A%8C)
-- [🧑🏻‍🔧  **피드백 개선**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%ED%94%BC%EB%93%9C%EB%B0%B1-%EA%B0%9C%EC%84%A0)
+- [🧑🏻‍🔧  피드백 개선](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#-%ED%94%BC%EB%93%9C%EB%B0%B1-%EA%B0%9C%EC%84%A0)
   * [🏷 배경음 및 효과음 볼륨 조절](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EB%B0%B0%EA%B2%BD%EC%9D%8C-%EB%B0%8F-%ED%9A%A8%EA%B3%BC%EC%9D%8C-%EB%B3%BC%EB%A5%A8-%EC%A1%B0%EC%A0%88)
-  * [**🏷 시작 버튼 추가**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%8B%9C%EC%9E%91-%EB%B2%84%ED%8A%BC-%EC%B6%94%EA%B0%80)
+  * [🏷 시작 버튼 추가](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%8B%9C%EC%9E%91-%EB%B2%84%ED%8A%BC-%EC%B6%94%EA%B0%80)
   * [🏷 튜토리얼이 자동으로 보여지는 기능 추가](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC%EC%9D%B4-%EC%9E%90%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B3%B4%EC%97%AC%EC%A7%80%EB%8A%94-%EA%B8%B0%EB%8A%A5-%EC%B6%94%EA%B0%80)
-  * [**🏷 정원초과 알림**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%A0%95%EC%9B%90%EC%B4%88%EA%B3%BC-%EC%95%8C%EB%A6%BC)
-- [✍🏻 7**조 한 줄 회고**](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#7%EC%A1%B0-%ED%95%9C-%EC%A4%84-%ED%9A%8C%EA%B3%A0)
+  * [🏷 정원초과 알림](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%A0%95%EC%9B%90%EC%B4%88%EA%B3%BC-%EC%95%8C%EB%A6%BC)
+- [✍🏻 7조 한 줄 회고](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#7%EC%A1%B0-%ED%95%9C-%EC%A4%84-%ED%9A%8C%EA%B3%A0)
 
 # 🎮 `<친다/>`: 온라인 코딩 배틀 사이트
 
@@ -69,7 +69,7 @@
 
 ---
 
-# 🧗🏻‍♀️ **제작 기간 & 팀원 소개**
+# 🧗🏻‍♀️ 제작 기간 & 팀원 소개
 
 ## 📆 제작 기간
 
@@ -78,7 +78,7 @@
 | 배포일 | 2022년 7월 30일 |
 | 서비스 개선 | 2022년 7월 30일 ~ 2022년 8월 5일 |
 
-## 👫🏻 **팀원소개**
+## 👫🏻 팀원소개
 
 | 포지션 | 이름 | 담당 | GitHub |
 | --- | --- | --- | --- |
@@ -129,7 +129,7 @@
 
 ---
 
-# 🔧 **기술적 의사결정**
+# 🔧 기술적 의사결정
 
 ## 🌝 Back-end
 
@@ -164,7 +164,7 @@
 
 ---
 
-# 🔥 **Trouble shooting**
+# 🔥 Trouble shooting
 
 ## 🌝 Back-end
 
@@ -259,7 +259,7 @@
 
 # ⚙️ ERD
 
-## **MySQL**
+## MySQL
 
 [![](https://blog.kakaocdn.net/dn/kUcoo/btrIWNRfudo/5apnSqFJx5EM63jrzPM90k/img.png)](https://blog.kakaocdn.net/dn/kUcoo/btrIWNRfudo/5apnSqFJx5EM63jrzPM90k/img.png)
 
@@ -307,7 +307,7 @@
 
 ---
 
-# 🎤  **마케팅 전략**
+# 🎤  마케팅 전략
 
 ## 🏷 항해 99 내 약 2천명의 개발자에게 홍보
 
@@ -365,7 +365,7 @@
 
 ---
 
-# 🧑🏻‍🔧  **피드백 개선**
+# 🧑🏻‍🔧  피드백 개선
 
 ## 🏷 배경음 및 효과음 볼륨 조절
 
@@ -385,15 +385,15 @@
 > > 
 > > [![](https://blog.kakaocdn.net/dn/1DQUt/btrITpXRgLn/XGdb9rJGZw9DLGBE3SYB91/img.png)](https://blog.kakaocdn.net/dn/1DQUt/btrITpXRgLn/XGdb9rJGZw9DLGBE3SYB91/img.png)
 
-## **🏷 시작 버튼 추가**
+## 🏷 시작 버튼 추가
 
-> **🏷 시작 버튼 추가**
+> 🏷 시작 버튼 추가
 > 
 > > **📬 피드백**: 스타트 버튼이 따로 있다면 어디 있는지 잘 보이지 않는다. 입장 후 상대방과 레디를 했음에도 시작이 안되었다. 만약 시작을 할 수 있는 버튼 등이 따로 있다면 조금 더 분명하게 나타나도 좋을 것 같다는 의견
 > 
-> > **📭 기능 개선 :**
+> > 📭 기능 개선 :
 > > 
-> > eady만 누르고 양쪽이 다 누르면 자동으로 시작되었던 기존의 방식에서 상대방이 레디를 눌렀는지 확인 할 수 있게 변경하였고 방장이 게임을 시작할 수 있게 버튼을 추가
+> > ready만 누르고 양쪽이 다 누르면 자동으로 시작되었던 기존의 방식에서 상대방이 레디를 눌렀는지 확인 할 수 있게 변경하였고 방장이 게임을 시작할 수 있게 버튼을 추가
 > 
 > > **🧮 Before :**
 > > 
@@ -415,9 +415,9 @@
 > > 
 > > [![](https://blog.kakaocdn.net/dn/bOWJyu/btrIUalRetE/B3vC5sgCso5P5ZKXvrX2G1/img.png)](https://blog.kakaocdn.net/dn/bOWJyu/btrIUalRetE/B3vC5sgCso5P5ZKXvrX2G1/img.png)
 
-## **🏷 정원초과 알림**
+## 🏷 정원초과 알림
 
-> **🏷 정원초과 알림**
+> 🏷 정원초과 알림
 > 
 > > **📬 피드백**: 인원이 찬 방에 입장이 가능하다며 개선 요청
 > 
@@ -429,7 +429,7 @@
 
 ---
 
-# ✍🏻 7**조 한 줄 회고**
+# ✍🏻 7조 한 줄 회고
 
 > <덜 외로운 공간>
 >
