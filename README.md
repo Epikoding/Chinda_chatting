@@ -54,7 +54,10 @@
 </video>
 
 [![Video Label](http://img.youtube.com/vi/b6rNFH3fR3o/0.jpg)](https://youtu.be/b6rNFH3fR3o)
-   
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=nTQUwghvy5Q" target="_blank">
+ <img src="http://img.youtube.com/vi/nTQUwghvy5Q/mqdefault.jpg" alt="Watch the video" width="240" height="180" border="10" />
+</a>
 ---
 
 # 🙋🏻 저희 프로젝트가 더 궁금하신가요? ⤵️
