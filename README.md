@@ -1,3 +1,4 @@
+![최고의 프로젝트상](https://user-images.githubusercontent.com/103272978/184330278-aae3acd3-f7a3-43e2-a0f8-de78d5c5c59e.png)
 # 목차
 - [🎮 `<친다/>`: 온라인 코딩 배틀 사이트](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%B9%9C%EB%8B%A4-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%BD%94%EB%94%A9-%EB%B0%B0%ED%8B%80-%EC%82%AC%EC%9D%B4%ED%8A%B8)
 - [📼 <친다/> Demo Youtube](https://github.com/Epikoding/Chinda_chatting/blob/Chinda_chatting/README.md#%EC%B9%9C%EB%8B%A4-demo-youtube)
